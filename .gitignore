@@ -6,6 +6,11 @@
 build/
 DerivedData/
 
+*.hmap
+*.xccheckout
+*.xcworkspace
+!default.xcworkspace
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
