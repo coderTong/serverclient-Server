@@ -100,5 +100,7 @@ int main(void) {
         write(acceptResult, stringS, sizeof(stringS));
     }
     
+    close(listenfd);
+    
     return 0;
 }
