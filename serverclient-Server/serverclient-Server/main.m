@@ -84,7 +84,8 @@ int main(void) {
     
     // 5. accept
     struct sockaddr_in peeraddr; // 对方的地址
-    socklen_t peerLen = sizeof(peeraddr);// 对方的地址长度--peerLen一定要有初始值
+    socklen_t peerLen = sizeof(peeraddr);// 对方的地址长度--peerLen一定要有初始值------这个参数一定要初始化
+    // 也就是说 accept 的第三个参数一定要初始化,不然accept函数必定返回失败,谨记
     int acceptResult = accept(listenfd, (struct sockaddr *)&peeraddr, &peerLen);
     if (acceptResult < 0) {// 接受连接,从已完成连接的对头得到一个连接
         ERR_EXIT("accept --error");
@@ -101,9 +102,14 @@ int main(void) {
 //        fputs(recvbuf, stdout);
         //        write(acceptResult, recvbuf, ret);
         
+        
+        
         strcat(stringS, recvbuf);
         strcat(stringS, "\n");
         write(acceptResult, stringS, sizeof(stringS));
+        
+//        memset(stringS, 0, sizeof(stringS));
+//        memset(recvbuf, 0, sizeof(recvbuf));
         
         
     }
