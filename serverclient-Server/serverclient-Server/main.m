@@ -91,13 +91,21 @@ int main(void) {
     }
     // acceptResult 是新得到的一个套接字---已连接套接字-----主动套接字
     char recvbuf[1024];
-    char stringS[1024] = "来至162.243.64.148的回复....";
+    char stringS[1024];
+    char stringO[1024];
+    strcpy (stringS,"coderTomWu回复: \n");
+    strcpy (stringO,"coderTomWu回复: \n");
     while (1) {
         memset(recvbuf, 0, sizeof(recvbuf));
         int ret = read(acceptResult, recvbuf, sizeof(recvbuf));
-        fputs(recvbuf, stdout);
+//        fputs(recvbuf, stdout);
         //        write(acceptResult, recvbuf, ret);
+        
+        strcat(stringS, recvbuf);
+        strcat(stringS, "\n");
         write(acceptResult, stringS, sizeof(stringS));
+        
+        
     }
     
     close(listenfd);
