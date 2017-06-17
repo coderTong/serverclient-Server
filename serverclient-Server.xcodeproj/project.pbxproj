@@ -27,7 +27,6 @@
 		AC27C52E1EF392B2004DA346 /* serverclient-Server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "serverclient-Server"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC27C5311EF392B2004DA346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC27C5B61EF56FFD004DA346 /* clientC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = clientC.c; sourceTree = "<group>"; };
-		AC27C5B71EF56FFD004DA346 /* clientC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clientC.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +61,6 @@
 			children = (
 				AC27C5311EF392B2004DA346 /* main.m */,
 				AC27C5B61EF56FFD004DA346 /* clientC.c */,
-				AC27C5B71EF56FFD004DA346 /* clientC.h */,
 			);
 			path = "serverclient-Server";
 			sourceTree = "<group>";
